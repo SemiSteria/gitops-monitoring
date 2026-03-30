@@ -21,5 +21,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true
-      - Replace=true
+      - ServerSideApply=true # Obligatoire pour Prometheus sur K3s
