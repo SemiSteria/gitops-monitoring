@@ -1,0 +1,25 @@
+cat > monitoring/values.yaml <<'EOF'
+kube-prometheus-stack:
+  grafana:
+    adminPassword: "changeme123"
+    service:
+      type: NodePort
+      nodePort: 30300
+
+  prometheus:
+    service:
+      type: NodePort
+      nodePort: 30900
+
+  alertmanager:
+    enabled: true
+    service:
+      type: NodePort
+      nodePort: 30903
+
+  nodeExporter:
+    enabled: true
+
+  kubeStateMetrics:
+    enabled: true
+EOF
